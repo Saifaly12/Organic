@@ -1,0 +1,1044 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::selection{
+  background-color: #8BC34A;
+}
+body {
+font-family: "Open Sans", sans-serif;
+}
+.container{
+  width: 80%;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+.Customize {
+  background-color: #fff;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  position: fixed;
+  top: 150px;
+  right: -1px;
+  width: 120px;
+  height: 45px;
+  z-index: 10;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  transition: all 0.4s;
+}
+.Customize:hover {
+  color: rgb(37, 99, 235);
+}
+.Customize i {
+  color: #000000;
+}
+#nanbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #fff;
+}
+
+#nanbar .innernav {
+  padding-block: 10px;
+}
+
+#nanbar .innernav .innerNanContent {
+  padding-inline: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+#nanbar .innernav .right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#nanbar .innernav .image {
+  width: 190px;
+}
+
+#nanbar .innernav .image img {
+  width: 100%;
+  display: block;
+}
+
+#nanbar .innernav .middle ul {
+  display: flex;
+  gap: 30px;
+}
+
+#nanbar .innernav .middle a {
+  transition: all 0.3s ease;
+}
+#nanbar .innernav .middle a:hover {
+  color: #92c755;
+}
+
+#nanbar .innernav .right {
+  justify-self: end;
+  gap: 15px;
+  display: flex;
+}
+#nanbar .innernav .right span {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(139, 195, 74);
+}
+#nanbar .innernav .right > span,
+.fa-basket-shopping {
+  color: #92c755;
+}
+#nanbar .innernav .right .fa-basket-shopping {
+  position: relative;
+}
+#nanbar .innernav .right .fa-basket-shopping::after {
+  content: "0";
+  font-size: 8px;
+  background-color: #92c755;
+  position: absolute;
+  color: #000;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  align-content: center;
+  transform: translate(-40%, -60%);
+}
+#home {
+  min-height: 100dvh;
+  background-color: #fbfaf8;
+}
+#home .homeContent {
+  display: flex;
+  gap: 30px;
+  padding-block: 120px;
+  margin-inline: 2.5px;
+}
+
+#home .homeContent .homeLeft {
+  flex: 1;
+}
+#home .homeContent .homeLeft img {
+  width: fit-content;
+  display: block;
+}
+
+#home .homeContent .homeRight {
+  flex: 1;
+  margin-top: 40px;
+}
+#home .homeContent .homeRight .paperImage {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.roles-container {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  overflow: hidden;
+}
+.role {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 60px;
+  height: 100%;
+  color: #000;
+  animation: role 4s infinite;
+}
+/* will use 10/15 steps one 10% tow 15%*/
+/* when i use 10% i pull the word very fast 
+  and 15% pull the word little fast as breathing effect
+*/
+@keyframes role {
+  /* 0-10% */
+  10% {
+    transform: translateY(-108%);
+  }
+  /* back 8px to make a little dropped effect   */
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-208%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-308%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  85% {
+    transform: translateY(-408%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
+#home .homeContent .homeRight .before {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20.4px;
+  color: rgb(17, 17, 17);
+}
+#home .homeContent .homeRight h1 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 72.8px;
+  color: rgb(17, 17, 17);
+  margin-bottom: 10px;
+}
+#home .homeContent .homeRight p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
+  color: rgb(51, 51, 51);
+  margin-bottom: 20px;
+}
+
+#home .homeContent .homeRight button {
+  display: flex;
+  width: 180px;
+  height: 60px;
+  border-radius: 8px;
+  gap: 10px;
+  background-color: #6a9739;
+  transition: all 0.3s ease;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+#home .homeContent .homeRight button:hover {
+  background-color: #92c755;
+}
+#home .homeContent .homeRight button span {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  color: rgb(255, 255, 255);
+}
+#home .homeContent .homeRight button i {
+  color: #fff;
+  font-size: 17px;
+}
+
+#service {
+  background-color: #000;
+  width: 100%;
+  min-height: auto;
+}
+#service .serviceCards {
+  padding-block: 35px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+#service .serviceCards .card {
+  background-color: #303030;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 35px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+#service .serviceCards .card:hover{
+  background-color: rgb(86, 86, 86);
+}
+#service .serviceCards .card .cardInner {
+  display: flex;
+  gap: 12px;
+  color: #fff;
+  justify-content: center;
+}#service .serviceCards .card .cardInner i{
+  font-size: 20px;
+  color: #8BC34A;
+}
+#service .serviceCards .card .cardInner .innerText h4 {
+  margin-bottom: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+#service .serviceCards .card .cardInner .innerText p {
+font-size: 16px;
+font-weight: 400;
+line-height: 25.6px;
+}
+
+#Selling{
+  background-color: #fff;
+  width: 100%;
+}
+#Selling .container{
+  padding-top: 140px;
+  padding-bottom: 50px;
+}
+
+#Selling .container .conHead{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+#Selling .container .conHead h4{
+font-size: 34px;
+font-weight: 700;
+line-height: 44.2px;
+color: rgb(17, 17, 17);
+margin-bottom: 15px;
+}
+#Selling .container .conHead img{
+  width: 70px;
+  height: 35px;
+}
+
+.sellingCards{
+  display: flex;
+  gap: 20px;
+}
+.sellingCards .cardd{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.sellingCards .cardd img{
+  width: 100%;
+  margin-bottom: 13px;
+  display: block;
+}
+.sellingCards .cardd .cardInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.sellingCards .cardd .sold{
+font-size: 13.6px;
+font-weight: 400;
+line-height: 17.68px;
+color: #BDBDBD;
+cursor: auto;
+}
+.sellingCards .cardd h2{
+font-size: 16px;
+font-weight: 700;
+line-height: 21px;
+color: rgb(17, 17, 17);
+}
+.sellingCards .cardd span{
+font-family: "Open Sans", sans-serif;
+font-size: 14.4px;
+font-weight: 700;
+line-height: 18.72px;
+color: rgb(51, 51, 51);
+}
+.sellingCards .cardd .lastDiscound{
+  display: flex;
+  gap: 5px;
+}
+.sellingCards .cardd .lastDiscound .discound{
+font-size: 14.4px;
+font-weight: 700;
+line-height: 18.72px;
+color: #BDBDBD;
+text-decoration: line-through;
+}
+
+
+
+#Fresh {
+  background-color: #F8F6F3; 
+  width: 100%;
+  padding-block: 100px;
+  position: relative;
+}
+.center{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -13px;
+  left: 47%;
+}
+#Fresh .container {
+  width: 80%;
+  margin: auto;
+}
+
+.FreshCards {
+  display: flex;
+  gap: 25px; 
+}
+.FreshCards .cardd {
+  background-color: #fff;
+  width: 33.333%; 
+  padding: 15px; 
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 8px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.FreshCards .cardd:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+.FreshCards .cardd .cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 30px;
+}
+.FreshCards .cardd h2 {
+font-size: 24px;
+font-weight: 700;
+line-height: 31px;
+color: rgb(17, 17, 17);
+}
+.FreshCards .cardd p {
+font-size: 16px;
+font-weight: 400;
+line-height: 25.6px;
+color: rgb(51, 51, 51);
+}
+.FreshCards .cardd img {
+  width: 50%;
+  align-self: center;
+  display: block;
+}
+
+
+
+#Purchase{
+  background-color: #000;
+  position: relative;
+}
+#Purchase .fa-sort-down{
+  color: rgb(0, 0, 0);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+}
+#Purchase .container{
+  padding-block: 60px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+#Purchase .container .content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+#Purchase .container .content h2{
+font-size: 34px;
+font-weight: 700;
+line-height: 44.2px;
+color: rgb(255, 255, 255);
+}
+#Purchase .container .content button {
+  display: flex;
+  width: 180px;
+  height: 60px;
+  border-radius: 8px;
+  gap: 10px;
+  background-color: #6a9739;
+  color: #fff;
+  transition: all 0.3s ease;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+#Purchase .container .content button:hover{
+  background-color: #92c755;
+}
+#Try{
+  height: 100px;
+  width: 100%;
+  background-color: #F8F6F3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Try h3{
+font-size: 24px;
+font-weight: 700;
+line-height: 31.2px;
+color: rgb(17, 17, 17);
+}
+
+
+#Trending{
+  background-color: #fff;
+  width: 100%;
+}
+#Trending .container{
+  padding-top: 140px;
+  padding-bottom: 50px;
+}
+
+#Trending .container .conHead{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+#Trending .container .conHead h4{
+font-size: 34px;
+font-weight: 700;
+line-height: 44.2px;
+color: rgb(17, 17, 17);
+margin-bottom: 15px;
+}
+#Trending .container .conHead img{
+  width: 70px;
+  height: 35px;
+}
+
+.sellingCards{
+  display: flex;
+  gap: 20px;
+}
+.sellingCards .cardd{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.sellingCards .cardd img{
+  width: 100%;
+  margin-bottom: 13px;
+  display: block;
+}
+.sellingCards .cardd .cardInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.sellingCards .cardd .sold{
+font-size: 13.6px;
+font-weight: 400;
+line-height: 17.68px;
+color: #BDBDBD;
+cursor: auto;
+}
+.sellingCards .cardd h2{
+font-size: 16px;
+font-weight: 700;
+line-height: 21px;
+color: rgb(17, 17, 17);
+}
+.sellingCards .cardd span{
+font-family: "Open Sans", sans-serif;
+font-size: 14.4px;
+font-weight: 700;
+line-height: 18.72px;
+color: rgb(51, 51, 51);
+}
+.sellingCards .cardd .lastDiscound{
+  display: flex;
+  gap: 5px;
+}
+.sellingCards .cardd .lastDiscound .discound{
+font-size: 14.4px;
+font-weight: 700;
+line-height: 18.72px;
+color: #BDBDBD;
+text-decoration: line-through;
+}
+
+
+
+#Customers{
+  background-color: #FDFDFC;
+}
+#Customers .container{
+  padding-block: 100px;
+  width: 80%;
+  margin: auto;
+}
+#Customers h2{
+font-size: 34px;
+font-weight: 700;
+line-height: 44.2px;
+color: rgb(17, 17, 17);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+}
+.CustomerCards {
+  display: flex;
+  gap: 25px;
+  align-items: flex-end;
+}
+.CustomerCards .card {
+  width: 33.333%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  padding: 50px 30px;
+}
+.CustomerCards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+.CustomerCards .card p{
+font-size: 16px;
+font-weight: 400;
+line-height: 25.6px;
+color: rgb(51, 51, 51);
+margin-block: 20px;
+text-align: center;
+}
+.CustomerCards .card .user{
+  display: flex;
+  gap:20px;
+  align-items: center;
+  text-align: center;
+}
+.CustomerCards .card .user img{
+  width: 50px;
+  border-radius: 50%;
+}
+.CustomerCards .cardbg {
+  background-image: url(../images/user-2.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 33.333%; 
+  border-radius: 8px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  min-height: 400px;
+}
+.CustomerCards .cardbg::before {
+  border-radius: 8px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.CustomerCards .cardbg:hover::before {
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+.CustomerCards .cardbg > * {
+  position: relative;
+  z-index: 2;
+}
+.CustomerCards .cardbg h3{
+font-size: 34px;
+font-weight: 700;
+line-height: 44.2px;
+color: rgb(255, 255, 255);
+margin-bottom: 20px;
+}
+.CustomerCards .cardbg .white{
+font-size: 16px;
+font-weight: 400;
+line-height: 25.6px;
+color: rgb(255, 255, 255);
+}
+#Customers .container button {
+  display: flex;
+  width: 180px;
+  height: 60px;
+  border-radius: 8px;
+  gap: 10px;
+  background-color: #6a9739;
+  color: #fff;
+  transition: all 0.3s ease;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+#Customers .container button:hover{
+  background-color: #92c755;
+}
+
+.CustomerCards .card .cardInfo {
+  display: flex;
+  gap: 3px;
+  margin-top: 35px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.CustomerCards .card h2 {
+font-size: 24px;
+font-weight: 700;
+line-height: 31px;
+color: rgb(17, 17, 17);
+}
+.CustomerCards .card p {
+font-size: 16px;
+font-weight: 400;
+line-height: 25.6px;
+color: rgb(51, 51, 51);
+}
+.CustomerCards .card img {
+  width: 50%;
+  align-self: center;
+  display: block;
+}
+
+
+#footer{
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
+#footer .foAbout .FooterImage img{
+  width: 100%;
+}
+
+#footer .main{
+  padding-block: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+#footer .foAbout .FooterImage{
+  width: 55%;
+  margin-bottom: 20px;
+}
+#footer .foAbout span{
+font-size: 16px;
+font-weight: 700;
+line-height: 25.6px;
+color: rgb(248, 246, 243);
+}
+
+
+#footer h2{
+font-family: Merriweather, serif;
+font-size: 22px;
+font-weight: 400;
+line-height: 33px;
+color: rgb(255, 255, 255);
+margin-bottom: 10px;
+}
+#footer  li{
+  font-family: "Open Sans", sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 25.6px;
+}
+#footer  a{
+  transition: all 0.4s ease;
+  color: #919191;
+}
+#footer a:hover{
+  color: #fff;
+}
+.last{
+  border-top: 1px solid #303030;
+}
+.last .container{
+  padding-block: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.last span{
+font-family: "Open Sans", sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 25.6px;
+color: rgb(248, 246, 243);
+}
+#footer .foLinks{
+  display: flex;
+  gap: 10px;
+}
+#footer .foLinks i{
+  color: #fff;
+
+}
+
+
+
+
+/* ---------- Tablets (max-width: 992px) ---------- */
+@media (max-width: 992px) {
+  .container {
+    width: 90%;
+  }
+
+  #nanbar .innernav .innerNanContent {
+    grid-template-columns: auto 1fr auto;
+    padding-inline: 10px;
+  }
+  #nanbar .innernav .middle ul {
+    gap: 16px;
+  }
+  #nanbar .innernav .image {
+    width: 150px;
+  }
+
+  #home .homeContent {
+    gap: 15px;
+  }
+  #home .homeContent .homeRight h1 {
+    font-size: 40px;
+    line-height: 1.3;
+  }
+
+  #service .serviceCards {
+    flex-wrap: wrap;
+  }
+  #service .serviceCards .card {
+    width: calc(50% - 20px);
+  }
+
+  .sellingCards {
+    flex-wrap: wrap;
+  }
+  .sellingCards .cardd {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  .FreshCards {
+    flex-wrap: wrap;
+  }
+  .FreshCards .cardd {
+    width: calc(50% - 12.5px);
+    margin-bottom: 20px;
+  }
+
+  #Purchase .container .content {
+    gap: 40px;
+  }
+  #Purchase .container .content h2 {
+    font-size: 28px;
+  }
+
+  .CustomerCards {
+    flex-wrap: wrap;
+  }
+  .CustomerCards .card,
+  .CustomerCards .cardbg {
+    width: calc(50% - 12.5px);
+    margin-bottom: 20px;
+  }
+
+  #footer .main {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  #footer .foAbout {
+    width: 100%;
+  }
+  #footer .foAbout .FooterImage {
+    width: 35%;
+  }
+}
+
+/* ---------- Small tablets / large phones (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+    #home .homeContent .homeRight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Customize {
+    display: none;
+  }
+
+  #nanbar .innernav .innerNanContent {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+  #nanbar .innernav .middle {
+    display: none;
+  }
+  #nanbar .innernav .image {
+    width: 130px;
+  }
+
+  #home .homeContent {
+    flex-direction: column;
+    padding-block: 60px;
+  }
+  #home .homeContent .homeLeft img {
+    width: 100%;
+  }
+  #home .homeContent .homeRight {
+    margin-top: 20px;
+  }
+  #home .homeContent .homeRight h1 {
+    font-size: 32px;
+  }
+
+  #service .serviceCards {
+    width: 90%;
+  }
+  #service .serviceCards .card {
+    width: 100%;
+  }
+  #service .serviceCards .card .cardInner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #Selling .container,
+  #Trending .container {
+    padding-top: 70px;
+  }
+  .sellingCards .cardd {
+    width: 100%;
+  }
+
+  .FreshCards {
+    flex-direction: column;
+  }
+  .FreshCards .cardd {
+    width: 100%;
+  }
+
+  #Purchase .container .content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .CustomerCards .card,
+  .CustomerCards .cardbg {
+    width: 100%;
+  }
+
+  #footer .main {
+    flex-direction: column;
+  }
+  #footer .foAbout .FooterImage {
+    width: 50%;
+  }
+  #footer .website,
+  #footer .Quick {
+    width: 100%;
+  }
+
+  .last .container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* ---------- Mobile phones (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+  }
+  #home .homeContent .homeRight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #home .homeContent .homeRight h1 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+  #home .homeContent .homeRight p {
+    font-size: 14px;
+  }
+  #home .homeContent .homeRight button {
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+  }
+
+  .roles-container {
+    height: 50px;
+  }
+  .role {
+    font-size: 15px;
+    line-height: 50px;
+  }
+
+  #Selling .container .conHead h4,
+  #Trending .container .conHead h4 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .FreshCards .cardd .cardInfo {
+    padding: 15px;
+  }
+  .FreshCards .cardd h2 {
+    font-size: 20px;
+  }
+
+  #Purchase .container .content h2 {
+    font-size: 22px;
+  }
+
+  #Customers h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .CustomerCards .cardbg {
+    min-height: 320px;
+    padding: 35px 25px;
+  }
+  .CustomerCards .cardbg h3 {
+    font-size: 24px;
+  }
+  #footer .foAbout .FooterImage {
+    width: 65%;
+  }
+}
